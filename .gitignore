@@ -177,3 +177,6 @@ docker-compose.override.yml
 
 # Procfile backup (si usas)
 Procfile.backup
+
+.claude/
+nul

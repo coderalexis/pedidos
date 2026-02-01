@@ -113,20 +113,37 @@ curl http://localhost:8082/order-service/actuator/health
 
 ## URLs Desplegadas
 
-### Customer Service
+### Producción (Railway)
 
+#### Customer Service
+| Recurso | URL |
+|---------|-----|
+| API Base | https://customer-service-95.up.railway.app/customer-service/api/v1/customers |
+| Swagger UI | https://customer-service-95.up.railway.app/customer-service/swagger-ui/index.html |
+| Health | https://customer-service-95.up.railway.app/customer-service/actuator/health |
+
+#### Order Service
+| Recurso | URL |
+|---------|-----|
+| API Base | https://order-service-production-0b84.up.railway.app/order-service/api/v1/orders |
+| Swagger UI | https://order-service-production-0b84.up.railway.app/order-service/swagger-ui/index.html |
+| Health | https://order-service-production-0b84.up.railway.app/order-service/actuator/health |
+| Circuit Breakers | https://order-service-production-0b84.up.railway.app/order-service/actuator/circuitbreakers |
+
+### Local (Docker)
+
+#### Customer Service
 | Recurso | URL |
 |---------|-----|
 | API Base | http://localhost:8081/customer-service/api/v1/customers |
-| Swagger UI | http://localhost:8081/customer-service/swagger-ui.html |
+| Swagger UI | http://localhost:8081/customer-service/swagger-ui/index.html |
 | Health | http://localhost:8081/customer-service/actuator/health |
 
-### Order Service
-
+#### Order Service
 | Recurso | URL |
 |---------|-----|
 | API Base | http://localhost:8082/order-service/api/v1/orders |
-| Swagger UI | http://localhost:8082/order-service/swagger-ui.html |
+| Swagger UI | http://localhost:8082/order-service/swagger-ui/index.html |
 | Health | http://localhost:8082/order-service/actuator/health |
 | Circuit Breakers | http://localhost:8082/order-service/actuator/circuitbreakers |
 

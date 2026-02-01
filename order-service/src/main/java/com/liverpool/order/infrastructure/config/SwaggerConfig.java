@@ -14,12 +14,15 @@ import java.util.List;
 @Configuration
 public class SwaggerConfig {
 
-    @Value("${server.port:8082}")
-    private String serverPort;
+    @Value("${server.servlet.context-path:}")
+    private String contextPath;
 
     @Bean
     public OpenAPI customOpenAPI() {
+        String basePath = (contextPath == null || contextPath.isBlank()) ? "/" : contextPath;
+
         return new OpenAPI()
+                .servers(List.of(new Server().url(basePath)))
                 .info(new Info()
                         .title("Order Service API")
                         .description("API REST para la gestión de pedidos del sistema Liverpool. " +
@@ -27,7 +30,7 @@ public class SwaggerConfig {
                         .version("1.0.0")
                         .contact(new Contact()
                                 .name("Equipo de Desarrollo Liverpool")
-                                .email("dev@liverpool.com.mx")
+                                .email("coderalexis@liverpool.com.mx")
                                 .url("https://www.liverpool.com.mx"))
                         .license(new License()
                                 .name("Propietario")

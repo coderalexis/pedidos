@@ -25,6 +25,14 @@ public class SwaggerConfig {
                 .servers(List.of(new Server().url(basePath)))
                 .info(new Info()
                         .title("Customer Service API")
-                        .version("1.0.0"));
+                        .description("API REST para gestión de clientes - Sistema de Pedidos Liverpool")
+                        .version("1.0.0")
+                        .contact(new Contact()
+                                .name("Liverpool DevTeam")
+                                .email("coderalexis@liverpool.com")
+                                .url("https://www.liverpool.com"))
+                        .license(new License()
+                                .name("Uso interno Liverpool")
+                                .url("https://www.liverpool.com/terms")));
     }
 }

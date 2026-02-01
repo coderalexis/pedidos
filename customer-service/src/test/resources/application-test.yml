@@ -1,0 +1,18 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/test_customer_db
+      auto-index-creation: true
+
+  # Embedded MongoDB configuration via flapdoodle
+de:
+  flapdoodle:
+    mongodb:
+      embedded:
+        version: 6.0.5
+
+logging:
+  level:
+    root: WARN
+    com.liverpool.customer: DEBUG
+    org.springframework.data.mongodb: DEBUG

@@ -1,0 +1,11 @@
+spring:
+  data:
+    mongodb:
+      uri: ${MONGODB_URI:mongodb://root:root@mongodb:27017/customer_db?authSource=admin}
+      auto-index-creation: true
+
+logging:
+  level:
+    root: INFO
+    com.liverpool.customer: INFO
+    org.springframework.data.mongodb: WARN

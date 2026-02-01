@@ -1,0 +1,14 @@
+spring:
+  data:
+    mongodb:
+      uri: ${MONGODB_URI:mongodb://root:root@mongodb:27017/order_db?authSource=admin}
+      auto-index-creation: true
+
+customer-service:
+  url: ${CUSTOMER_SERVICE_URL:http://customer-service:8081/customer-service}
+
+logging:
+  level:
+    root: INFO
+    com.liverpool.order: INFO
+    org.springframework.data.mongodb: WARN

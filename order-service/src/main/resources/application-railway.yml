@@ -1,0 +1,14 @@
+spring:
+  data:
+    mongodb:
+      uri: ${MONGODB_URI}
+      auto-index-creation: true
+
+customer-service:
+  url: ${CUSTOMER_SERVICE_URL}
+
+logging:
+  level:
+    root: INFO
+    com.liverpool.order: INFO
+    org.springframework.data.mongodb: WARN

@@ -33,14 +33,6 @@ public class SwaggerConfig {
                                 .url("https://www.liverpool.com"))
                         .license(new License()
                                 .name("Uso interno Liverpool")
-                                .url("https://www.liverpool.com/terms")))
-                .servers(List.of(
-                        new Server()
-                                .url("http://localhost:" + serverPort + contextPath)
-                                .description("Servidor Local de Desarrollo"),
-                        new Server()
-                                .url("http://customer-service:8081" + contextPath)
-                                .description("Servidor Docker Compose")
-                ));
+                                .url("https://www.liverpool.com/terms")));
     }
 }

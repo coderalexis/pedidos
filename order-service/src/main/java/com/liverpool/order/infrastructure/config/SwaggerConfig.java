@@ -31,14 +31,6 @@ public class SwaggerConfig {
                                 .url("https://www.liverpool.com.mx"))
                         .license(new License()
                                 .name("Propietario")
-                                .url("https://www.liverpool.com.mx/terminos")))
-                .servers(List.of(
-                        new Server()
-                                .url("http://localhost:" + serverPort + "/order-service")
-                                .description("Servidor de desarrollo local"),
-                        new Server()
-                                .url("http://order-service:8082/order-service")
-                                .description("Servidor Docker")
-                ));
+                                .url("https://www.liverpool.com.mx/terminos")));
     }
 }
